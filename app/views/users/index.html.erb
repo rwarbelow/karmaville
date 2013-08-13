@@ -9,4 +9,16 @@
   <% @users.each do |user| %>
     <%= render 'user_row', :user => user %>
   <% end %>
+
+  <div class="pagination">
+  <ul>
+    <li><a href="/?page=<%= @page_num-1 %>">Prev</a></li>
+    <li><a href="/?page=<%= @page_num %>"><%= @page_num %></a></li>
+    <li><a href="/?page=<%= @page_num+1 %>"><%= @page_num +1 %></a></li>
+    <li><a href="/?page=<%= @page_num+2 %>"><%= @page_num +2 %></a></li>
+    <li><a href="/?page=<%= @page_num+3 %>"><%= @page_num +3 %></a></li>
+    <li><a href="/?page=<%= @page_num+4 %>"><%= @page_num +4 %></a></li>
+    <li><a href="/?page=<%= @page_num+1 %>">Next</a></li>
+  </ul>
+</div>
 </table>

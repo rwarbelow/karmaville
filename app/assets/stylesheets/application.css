@@ -16,3 +16,8 @@
 body {
   padding-top: 60px;
 }
+
+.disabled {
+   pointer-events: none;
+   cursor: default;
+}

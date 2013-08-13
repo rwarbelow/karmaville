@@ -6,7 +6,7 @@ class KarmaPoint < ActiveRecord::Base
   validates :value, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0}
   validates :label, :presence => true
 
-  before_save :fix_karma
+  after_save :fix_karma
 
   def fix_karma
     self.user.update_karma

@@ -32,4 +32,12 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def self.page(num)
+    if num > 0
+      User.limit(50).offset((num*50)-50)
+    else
+      User.limit(50)
+    end
+  end
 end
